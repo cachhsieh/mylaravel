@@ -17,11 +17,12 @@ use Illuminate\Http\Request;
 /* * * 顯示所有任務 * * */
 Route::get('/', function () {
 //    return view('welcome');
+    return view('tasks');
 });
 
 /* * * 接收表單來新增任務 * * */
 Route::post('/task', function (Request $request) {
-    //
+    return "OK~~";
 });
 
 /* * * 刪除任務 * * */

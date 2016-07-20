@@ -1,8 +1,5 @@
 <?php
 
-use App\Task;
-use Illuminate\Http\Request;
-
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;

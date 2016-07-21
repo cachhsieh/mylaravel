@@ -25,7 +25,7 @@
                 <div class="navbar-header">
                     <!-- TODO: Navbar 內容 -->
 
-                    <!-- 首頁連結 -->
+                    <!-- TODO: 首頁連結 -->
                     <a class="navbar-brand" href="{{ url('/') }}">
                         Task List
                     </a>

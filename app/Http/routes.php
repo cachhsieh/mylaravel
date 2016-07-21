@@ -22,7 +22,9 @@ Route::get('/', function () {
 
 /* * * 接收表單來新增任務 * * */
 Route::post('/task', function (Request $request) {
-    
+    $task = new Task;
+    $task->name = $request->name;
+    $task->save();//儲存寫入資料庫
 });
 
 /* * * 刪除任務 * * */

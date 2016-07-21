@@ -18,7 +18,7 @@ use Illuminate\Http\Request;
 Route::get('/', function () {//get = 網圵列輸入網址//
 //從資料庫撈資料業排序
     $tasks = Task::orderBy("created_at", "asc")->get();
-    return view("tasks", ["tasks" => $tasks,"anotherVar"=>"hi~"]);
+    return view("tasks", ["tasks" => $tasks]);
 });
 
 //* * * 接收表單來新增任務 * * *//
@@ -43,6 +43,7 @@ Route::post('/task', function (Request $request) {
 });
 
 /* * * 刪除任務 * * */
-Route::delete('/task/{task}', function ($id) {
-//
+Route::delete('/task/{id}', function ($id) {
+    Task::findOrFail($id)->delete();
+    return redirect("/");
 });

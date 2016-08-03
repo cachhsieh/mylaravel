@@ -15,11 +15,13 @@ use Illuminate\Http\Request;
  */
 
 //* 顯示所有任務 *//
-Route::get('/', function () {//get = 網圵列輸入網址//
-//從資料庫撈資料業排序
-    $tasks = Task::orderBy("created_at", "asc")->get();
-    return view("tasks", ["tasks" => $tasks]);
-});
+//Route::get('/', function () {//get = 網圵列輸入網址//
+////從資料庫撈資料業排序
+//    $tasks = Task::orderBy("created_at", "asc")->get();
+//    return view("tasks", ["tasks" => $tasks]);
+//});
+Route::get("/","myResourceController@index");
+Route::get("/show/{name}","myResourceController@show");
 
 //* * * 接收表單來新增任務 * * *//
 Route::post('/task', function (Request $request) {
